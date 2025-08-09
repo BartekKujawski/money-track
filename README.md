@@ -1,2 +1,3 @@
 # money-track
-Accounting Program in Vanilla JS
+
+Accounting Program/Trade Book in Vanilla JS

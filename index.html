@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyTrack</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Container -->
+         <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="name"><i class='bx bxs-bank'></i> MoneyTrack</div>
+        </header>
+
+        <!-- Menu -->
+        <aside class="menu">
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <button class="menu-link">
+                        <i class='bx bxs-dashboard'></i> Podsumowanie</button>
+                </li>
+                <li class="menu-item">
+                    <button class="menu-link">
+                        <i class='bx bx-list-ol'></i> Konta</button>
+                </li>
+                <li class="menu-item">
+                    <button class="menu-link">
+                        <i class='bx bx-user'></i> Kontrahenci</button>
+                </li>
+                <li class="menu-item">
+                    <button class="menu-link">
+                        <i class='bx bx-calendar'></i> Miesiące</button>
+                </li>
+                <li class="menu-item">
+                    <button class="menu-link">
+                        <i class='bx bx-file'></i> Faktury</button>
+                </li>
+                <li class="menu-item">
+                    <button class="menu-link">
+                        <i class='bx bx-detail'></i> Raporty</button>
+                </li>
+            </ul>
+
+            <button class="new-invoice-btn">Nowa faktura</button>
+        </aside>
+
+        <!-- Main -->
+        <main class="main"></main>
+
+        <!-- Modal -->
+        <div class="modal-container">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2>Nowa faktura</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Bartosz Kujawski</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
