@@ -16,7 +16,7 @@
 
 <body>
     <!-- Container -->
-         <div class="container">
+    <div class="container">
         <!-- Header -->
         <header class="header">
             <div class="name"><i class='bx bxs-bank'></i> MoneyTrack</div>
@@ -35,43 +35,236 @@
                 </li>
                 <li class="menu-item">
                     <button class="menu-link">
-                        <i class='bx bx-user'></i> Kontrahenci</button>
-                </li>
-                <li class="menu-item">
-                    <button class="menu-link">
                         <i class='bx bx-calendar'></i> Miesiące</button>
-                </li>
-                <li class="menu-item">
-                    <button class="menu-link">
-                        <i class='bx bx-file'></i> Faktury</button>
-                </li>
-                <li class="menu-item">
-                    <button class="menu-link">
-                        <i class='bx bx-detail'></i> Raporty</button>
                 </li>
             </ul>
 
-            <button class="new-invoice-btn">Nowa faktura</button>
+            <div class="menu-footer">
+                <button class="new-invoice-btn">Nowa faktura</button>
+            </div>
         </aside>
 
         <!-- Main -->
-        <main class="main"></main>
+        <main class="main">
 
-        <!-- Modal -->
-        <div class="modal-container">
-            <div class="modal">
+            <!-- Search bar -->
+
+            <div class="top-bar">
+                <div class="search-container">
+                    <i class='bx bx-search'>
+                        <input type="text" placeholder="Szukaj klienta, faktury...">
+                </div>
+            </div>
+
+            <!-- Summary cards -->
+
+            <div class="summary-cards">
+                <div class="card revenue-card">
+                    <h3 class="card-title">Przychody w tym miesiącu</h3>
+                    <div class="card-value">15 zl</div>
+                </div>
+                <div class="card costs-card">
+                    <h3 class="card-title">Koszty w tym miesiącu</h3>
+                    <div class="card-value">3 zl</div>
+                </div>
+                <div class="card income-card">
+                    <h3 class="card-title">Przychody w tym miesiącu</h3>
+                    <div class="card-value">12 zl</div>
+                </div>
+                <div class="card income-card">
+                    <h3 class="card-title">Liczba zaległych faktur</h3>
+                    <div class="card-value">5</div>
+                </div>
+            </div>
+
+            <!-- Revenue/Costs chart -->
+
+            <div class="chart-section">
+                <div class="chart-card">
+                    <h3>Przychody / Koszty</h3>
+                    <div class="chart-placeholder">
+                        <div class="chart-line">
+                            <div class="line revenue-line"></div>
+                            <div class="line cost-line"></div>
+                        </div>
+                        <div class="chart-labels">
+                            <span>Styczeń</span>
+                            <span>Listopad</span>
+                            <span>Wrzesień</span>
+                            <span>Luty</span>
+                            <span>Czerwiec</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent activities -->
+
+            <div class="recent-activities">
+                <h3>Ostatnie działania</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <i class="fas fa-check"></i>
+                        <div class="activity-content">
+                            <span class="activity-text">Wystawiono fakturę</span>
+                            <span class="activity-detail">FV 021</span>
+                        </div>
+                        <span class="activity-time">2 min temu</span>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-check"></i>
+                        <div class="activity-content">
+                            <span class="activity-text">Opłacona faktura</span>
+                            <span class="activity-detail">FV 0019</span>
+                        </div>
+                        <span class="activity-time">30 min temu</span>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-check"></i>
+                        <div class="activity-content">
+                            <span class="activity-text">Dodana klienta</span>
+                            <span class="activity-detail">Jan Kowalski</span>
+                        </div>
+                        <span class="activity-time">1 godz. temu</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modals -->
+
+        <!-- Accounts Modal -->
+        <div class="accounts-modal modal">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <h2>Nowa faktura</h2>
+                    <h3>Lista kont</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Szukaj konta...">
+                    </div>
+                    <table class="accounts-table">
+                        <tr class="accounts-header">
+                            <th>Nazwa</th>
+                            <th>Numer</th>
+                        </tr>
+                        <tr class="account-item">
+                            <td class="contractor-name">Rachunek wlasciciela</td>
+                            <td class="contractor-number">250</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-text">
-                <p>Bartosz Kujawski</p>
+        <!-- Months Modal -->
+        <div class="accounts-modal modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Lista kont</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Szukaj konta...">
+                    </div>
+                    <div class="months-grid">
+                        <div class="month-item">
+                            <div class="month-header">
+                                <h4>Styczeń 2024</h4>
+                                <span class="month-status completed">Zakończony</span>
+                            </div>
+                            <div class="month-summary">
+                                <div class="summary-item">
+                                    <span class="label">Przychody:</span>
+                                    <span class="value income">15,420 zł</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="label">Koszty:</span>
+                                    <span class="value expense">8,750 zł</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="label">Zysk:</span>
+                                    <span class="value profit">6,670 zł</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </div>
+
+        <!-- New Invoice Modal -->
+        <div class="new-invoice-modal modal">
+            <div class="modal-content large">
+                <div class="modal-header">
+                    <h3>Nowa faktura</h3>
+                </div>
+                <div class="modal-body">
+                    <form class="invoice-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="invoice-number">Numer faktury</label>
+                                <input type="text" id="invoice-number" placeholder="FV/022/2025" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="invoice-date">Data wystawienia</label>
+                                <input type="date" id="invoice-date" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="client-name">Nazwa klienta</label>
+                                <input type="text" id="client-name" placeholder="Nazwa firmy lub osoby" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="client-nip">NIP klienta</label>
+                                <input type="text" id="client-nip" placeholder="123-456-78-90">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="client-address">Adres klienta</label>
+                            <textarea id="client-address" placeholder="Ulica, kod pocztowy, miasto" rows="2"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="payment-terms">Termin płatności (dni)</label>
+                            <input type="number" id="payment-terms" value="14" min="1" max="365">
+                        </div>
+
+                        <div class="invoice-summary">
+                            <div class="summary-row">
+                                <label>Suma netto:</label>
+                                <input type="number" id="total-net">
+                            </div>
+                            <div class="summary-row">
+                                <label>VAT:</label>
+                                <input type="number" id="total-vat">
+                            </div>
+                            <div class="summary-row total">
+                                <label>Suma brutto:</label>
+                                <input type="number" id="total-gross">
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Zapisz fakturę</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Bartosz Kujawski</p>
+        </div>
+    </footer>
     </div>
 
     <script src="./js/app.js"></script>
